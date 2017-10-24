@@ -1,4 +1,5 @@
 .rjacoby_game_container {
   border: solid 3px;
   background-color: green;
+  z-index: 100;
 }
