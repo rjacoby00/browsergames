@@ -1,9 +1,10 @@
 .rjacoby_game_container {
+  display: inline-block;
   border: solid 3px;
   background-color: green;
-  border-radius: 5px;
-  width 500px;
-  height: 500px;
-  position: absolute;
+  border-radius: 15px;
+  width 250px;
+  height: 250px;
+  position: relative;
   z-index: 100;
 }
