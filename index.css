@@ -8,8 +8,11 @@
   position: absolute;
   z-index: 100;
   padding: 15px;
-  margin: auto;
+  margin: 15px;
   top: 0px;
+}
+.rjacoby_game {
+  z-index: 1000;
 }
 body {
   position: relative !important;
