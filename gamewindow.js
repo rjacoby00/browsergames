@@ -56,6 +56,7 @@ function drawPaddle() {
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBall();
+    drawPaddle();
     if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
         dx = -dx;
     }
