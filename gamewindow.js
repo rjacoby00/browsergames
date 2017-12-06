@@ -19,20 +19,16 @@ var color = "#0095DD";
 var rightPressed = false;
 var leftPressed = false;
 var alerted = false;
+var first = true;
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
-
-function rjrestart() {
-    dx = 2;
-    dy = -2;
-    alerted = false;
-}
 
 function unrjgame() {
     document.getElementById("rjgame").remove();
     document.getElementById("rjgamecss").remove();
     document.getElementById("rjgamesidrj").remove();
+    first = false;
 }
 
 function keyDownHandler(e) {
@@ -68,6 +64,9 @@ function drawPaddle() {
     ctx.closePath();
 }
 function draw() {
+    if (!first) {
+        document.location.reload();
+    }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBall();
     drawPaddle();
