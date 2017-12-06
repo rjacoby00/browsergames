@@ -75,8 +75,8 @@ function draw() {
             dy = -dy;
         }
         else {
-            unrjgame();
             alert("GAME OVER");
+            unrjgame();
         }
     }
     if(rightPressed && paddleX < canvas.width-paddleWidth) {
