@@ -26,7 +26,6 @@ function unrjgame() {
     document.getElementById("rjgame").remove();
     document.getElementById("rjgamecss").remove();
     document.getElementById("rjgamesidrj").remove();
-    document.getElementById("rjgamejs").remove();
 }
 
 function keyDownHandler(e) {
@@ -75,8 +74,9 @@ function draw() {
             dy = -dy;
         }
         else {
-            alert("GAME OVER");
             unrjgame();
+            alert("GAME OVER");
+            document.getElementById("rjgamejs").remove();
         }
     }
     if(rightPressed && paddleX < canvas.width-paddleWidth) {
