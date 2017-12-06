@@ -18,9 +18,16 @@ var paddleX = (canvas.width-paddleWidth)/2;
 var color = "#0095DD";
 var rightPressed = false;
 var leftPressed = false;
+var alerted = false;
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
+
+function rjrestart() {
+    dx = 2;
+    dy = -2;
+    alerted = false;
+}
 
 function unrjgame() {
     document.getElementById("rjgame").remove();
@@ -61,8 +68,6 @@ function drawPaddle() {
     ctx.closePath();
 }
 function draw() {
-    dx = 2;
-    dy = -2;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBall();
     drawPaddle();
@@ -77,7 +82,10 @@ function draw() {
         }
         else {
             unrjgame();
-            alert("GAME OVER");
+            if(!alerted) {
+                alert("GAME OVER");
+                alerted = true;
+            }
         }
     }
     if(rightPressed && paddleX < canvas.width-paddleWidth) {
