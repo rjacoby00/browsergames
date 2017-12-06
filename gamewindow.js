@@ -1,6 +1,7 @@
 "use strict";
 var div = document.createElement('div');
 div.setAttribute('class', 'rjacoby_game');
+div.setAttribute('id', 'rjgame')
 div.innerHTML = '<link href="https://rawgit.com/rjacoby00/browsergames/master/index.css" rel="stylesheet" type="text/css" /><canvas width="480" height="320" id="rjgamesidrj" class="rjacoby_game_container"></canvas>';
 document.body.appendChild(div);
 
@@ -22,7 +23,7 @@ document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
 function unrjgame() {
-    document.getElementsByClass("rjacoby_game")[0].remove();
+    document.getElementById("rjgame").remove();
 }
 
 function keyDownHandler(e) {
