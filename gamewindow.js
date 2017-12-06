@@ -21,6 +21,10 @@ var leftPressed = false;
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
+function unrjgame() {
+    document.getElementsByClass("rjacoby_game")[0].remove();
+}
+
 function keyDownHandler(e) {
     if(e.keyCode == 39) {
         rightPressed = true;
@@ -67,8 +71,8 @@ function draw() {
             dy = -dy;
         }
         else {
+            unrjgame();
             alert("GAME OVER");
-            document.location.reload();
         }
     }
     if(rightPressed && paddleX < canvas.width-paddleWidth) {
