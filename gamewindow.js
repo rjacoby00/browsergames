@@ -25,7 +25,6 @@ document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
 function unrjgame() {
-    document.getElementById("rjgame").remove();
     document.getElementById("rjgamecss").remove();
     document.getElementById("rjgamesidrj").remove();
     first = false;
