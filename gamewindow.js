@@ -61,6 +61,8 @@ function drawPaddle() {
     ctx.closePath();
 }
 function draw() {
+    dx = 2;
+    dy = -2;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBall();
     drawPaddle();
@@ -76,7 +78,6 @@ function draw() {
         else {
             unrjgame();
             alert("GAME OVER");
-            document.getElementById("rjgamejs").remove();
         }
     }
     if(rightPressed && paddleX < canvas.width-paddleWidth) {
