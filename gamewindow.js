@@ -19,7 +19,6 @@ var color = "#0095DD";
 var rightPressed = false;
 var leftPressed = false;
 var alerted = false;
-var first = true;
 var brickRowCount = 3;
 var brickColumnCount = 5;
 var brickWidth = 75;
@@ -42,7 +41,7 @@ function unrjgame() {
     document.getElementById("rjgamecss").remove();
     document.getElementById("rjgamesidrj").remove();
     document.getElementById("rjacoby_game").remove();
-    first = false;
+    document.location.reload();
 }
 
 function keyDownHandler(e) {
@@ -93,9 +92,6 @@ function drawBricks() {
     }
 }
 function draw() {
-    if (!first) {
-        document.location.reload();
-    }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBricks();
     drawBall();
@@ -111,9 +107,9 @@ function draw() {
         }
         else {
             if(!alerted) {
-                unrjgame();
                 alert("GAME OVER");
                 alerted = true;
+                unrjgame();
             }
         }
     }
