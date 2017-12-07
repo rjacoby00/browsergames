@@ -100,6 +100,7 @@ function drawBricks() {
                 ctx.fillStyle = "#0095DD";
                 ctx.fill();
                 ctx.closePath();
+            }
         }
     }
 }
