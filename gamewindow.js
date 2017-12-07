@@ -40,6 +40,8 @@ document.addEventListener("keyup", keyUpHandler, false);
 
 function unrjgame() {
     document.getElementById("rjgamecss").remove();
+    document.getElementById("rjgamesidrj").remove();
+    document.getElementById("rjacoby_game").remove();
     first = false;
 }
 
@@ -108,8 +110,8 @@ function draw() {
             dy = -dy;
         }
         else {
-            unrjgame();
             if(!alerted) {
+                unrjgame();
                 alert("GAME OVER");
                 alerted = true;
             }
