@@ -40,7 +40,6 @@ document.addEventListener("keyup", keyUpHandler, false);
 
 function unrjgame() {
     document.getElementById("rjgamecss").remove();
-    document.getElementById("rjgamesidrj").remove();
     first = false;
 }
 
