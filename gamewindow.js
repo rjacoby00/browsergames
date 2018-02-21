@@ -2,8 +2,31 @@
 var div = document.createElement('div');
 div.setAttribute('class', 'rjacoby_game');
 div.setAttribute('id', 'rjgame')
-div.innerHTML = '<link href="https://cdn.rawgit.com/rjacoby00/browsergames/bc685cc8/index.css" rel="stylesheet" type="text/css" id="rjgamecss"/><canvas width="480" height="320" id="rjgamesidrj" class="rjacoby_game_container"></canvas>';
+div.innerHTML = '<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"><script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-firestore.js"></script></script><link href="https://cdn.rawgit.com/rjacoby00/browsergames/bc685cc8/index.css" rel="stylesheet" type="text/css" id="rjgamecss"/><canvas width="480" height="320" id="rjgamesidrj" class="rjacoby_game_container"></canvas>';
 document.body.appendChild(div);
+var config = {
+  apiKey: "AIzaSyDQm9vn70ftTP8NM8xwzrcOtfwpT482rdg",
+  authDomain: "bookmarkbreakout.firebaseapp.com",
+  databaseURL: "https://bookmarkbreakout.firebaseio.com",
+  projectId: "bookmarkbreakout",
+  storageBucket: "bookmarkbreakout.appspot.com",
+  messagingSenderId: "324943990435"
+};
+firebase.initializeApp(config);
+var db = firebase.firestore();
+var doc = db.doc("breakoutdata/version");
+var data;
+
+docRef.get().then(function(doc) {
+    if (doc.exists) {
+        console.log(doc.data());
+    } else {
+        console.log("No such document!");
+    }
+}).catch(function(error) {
+    console.log("Error getting document:", error);
+});
+
 
 var canvas = document.getElementById("rjgamesidrj");
 var ctx = canvas.getContext("2d");
