@@ -2,8 +2,9 @@
 var div = document.createElement('div');
 div.setAttribute('class', 'rjacoby_game');
 div.setAttribute('id', 'rjgame')
-div.innerHTML = '<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"><script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-firestore.js"></script></script><link href="https://cdn.rawgit.com/rjacoby00/browsergames/bc685cc8/index.css" rel="stylesheet" type="text/css" id="rjgamecss"/><canvas width="480" height="320" id="rjgamesidrj" class="rjacoby_game_container"></canvas>';
+div.innerHTML = '<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script><script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-firestore.js"></script><script src="https://cdn.rawgit.com/rjacoby00/browsergames/c06c6402/breakoutgame.js"></script><link href="https://cdn.rawgit.com/rjacoby00/browsergames/bc685cc8/index.css" rel="stylesheet" type="text/css" id="rjgamecss"/><canvas width="480" height="320" id="rjgamesidrj" class="rjacoby_game_container"></canvas>';
 document.body.appendChild(div);
+/*
 var config = {
   apiKey: "AIzaSyDQm9vn70ftTP8NM8xwzrcOtfwpT482rdg",
   authDomain: "bookmarkbreakout.firebaseapp.com",
@@ -160,3 +161,4 @@ function draw() {
     y += dy;
 }
 setInterval(draw, 10);
+*/
